@@ -1,4 +1,4 @@
-<%= form_for(@troll) do |f| %>
+<%= form_for [@dev, @troll] do |f| %>
   <% if @troll.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@troll.errors.count, "error") %> prohibited this troll from being saved:</h2>

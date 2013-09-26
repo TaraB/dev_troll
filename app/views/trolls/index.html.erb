@@ -14,9 +14,9 @@
     <% @trolls.each do |troll| %>
       <tr>
         <td><%= troll.text %></td>
-        <td><%= link_to 'Show', dev_troll_path(troll) %></td>
-        <td><%= link_to 'Edit', edit_dev_troll_path(troll) %></td>
-        <td><%= link_to 'Destroy', dev_troll_path(troll), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', dev_troll_path(troll.dev, troll) %></td>
+        <td><%= link_to 'Edit', edit_dev_troll_path(troll.dev, troll) %></td>
+        <td><%= link_to 'Destroy', dev_troll_path(troll.dev, troll), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Troll', new_troll_path %>
+<%= link_to 'New Troll', new_dev_troll_path(@dev) %>
