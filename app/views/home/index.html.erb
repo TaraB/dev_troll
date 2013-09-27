@@ -1,1 +1,6 @@
- <td><%= @randomtroll.text %></td>
+	 <td><%= @randomtroll.text %></td>
+	 <p>
+	 <% @alldevs.each do |dev|%>
+	 <a href=><%= dev.name %><% link_to dev_troll_path(dev, @random_troll) %></a>
+	 <% end %>
+	 </p>
